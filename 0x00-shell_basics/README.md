@@ -1,5 +1,6 @@
-##Tasks
- 
+## Tasks
+
+### mandatory 
 0. Where am I? : A script that prints the absolute path of the current working directory.
 1. What’s in there? : Display the contents list of your current directory.
 2. There is no place like home : Write a script that changes the working directory to the user’s home directory.
@@ -15,3 +16,6 @@
 12. File type : Write a script that prints the type of the file named iamafile. The file iamafile will be in the /tmp directory when we will run your script.
 13. We are symbols, and inhabit symbols : Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory.
 14. Copy HTML files : Create a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
+
+### advanced
+15. Let’s move : Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u. You can assume that the directory /tmp/u will exist when we will run your script
