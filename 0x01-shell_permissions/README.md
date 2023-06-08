@@ -11,3 +11,4 @@
 7. Everybody! : Write a script that adds execution permission to the owner, the group owner and the other users, to the file hello.
 8. James Bond : Write a script that sets the permission to the file hello as follows: Owner and Group: no permission at all ; and Other users: all the permissions
 9. John Doe : Write a script that sets the mode of the file hello to this:
+10. Look in the mirror : Write a script that sets the mode of the file hello the same as olleh’s mode.
