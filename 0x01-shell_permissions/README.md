@@ -1,7 +1,7 @@
 # 0x01 Shell Permissions
 
 ## Tasks
-### mandatory14
+### mandatory
 0. My name is Betty : Create a script that switches the current user to the user betty
 1. Who am I : Write a script that prints the effective username of the current user
 2. Groups : Write a script that prints all the groups the current user is part of.
@@ -19,3 +19,4 @@
 
 ### advanced
 14. Owner and group : Write a script that changes the owner to vincent and the group owner to staff for all the files and directories in the working directory.
+15. Symbolic links : Write a script that changes the owner and the group owner of _hello to vincent and staff respectively.
