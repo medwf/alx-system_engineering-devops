@@ -1,0 +1,16 @@
+total 48
+drwxr-xr-x 2 root root  251 Jun 12 00:24 .
+drwxr-xr-x 6 root root  121 Jun 11 23:28 ..
+-rwxr--r-- 1 root root   32 Jun 11 23:09 0-hello_world
+-rwxr--r-- 1 root root   28 Jun 11 23:14 1-confused_smiley
+-rwxr--r-- 1 root root   28 Jun 11 23:17 2-hellofile
+-rwxr--r-- 1 root root   39 Jun 11 23:24 3-twofiles
+-rwxr--r-- 1 root root   29 Jun 11 23:32 4-lastlines
+-rwxr--r-- 1 root root   29 Jun 11 23:36 5-firstlines
+-rwxr--r-- 1 root root   38 Jun 11 23:42 6-third_line
+-rwxr--r-- 1 root root   78 Jun 12 00:15 7-file
+-rwxr--r-- 1 root root   36 Jun 12 00:24 8-cwd_state
+-rw-r--r-- 1 root root   53 Jun 12 00:07 .gitignore
+-rw-r--r-- 1 root root  801 Jun 11 23:39 iacta
+-rw-r--r-- 1 root root    0 Jun 12 00:24 ls_cwd_content
+-rw-r--r-- 1 root root 1131 Jun 12 00:18 README.md
