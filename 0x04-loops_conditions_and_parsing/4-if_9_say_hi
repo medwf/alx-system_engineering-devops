@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# this Bash script that displays Best School 10 times. using while.
+# this Bash script that displays Best School 10 times. using while and if.
 
 count=1
 while [ $count -le 10 ]
@@ -9,5 +9,6 @@ do
     then
         echo "hi"
     fi
+    
     ((count++))
 done
