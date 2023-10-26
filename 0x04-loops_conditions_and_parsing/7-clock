@@ -12,14 +12,13 @@ do
         (( hours++ ))
     fi
 
-    if [ "$hours" == 13 ]
-    then
-        break
-    fi
-
     echo "$minutes"
     if [ $minutes == 59 ]
     then
+        if [ "$hours" == 13 ]
+        then
+            break
+        fi
         minutes=0
     fi
     (( minutes++ ))
