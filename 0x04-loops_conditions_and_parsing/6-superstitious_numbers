@@ -4,17 +4,19 @@
 count=1
 while [ $count -le 20 ]
 do
-    if [ $count == 4 ]
-    then
+    case $count in 
+    4)
         echo -e "$count\nbad luck from China"
-    elif [ $count == 9 ]
-    then
+        ;;
+    9)
         echo -e "$count\nbad luck from Japan"
-    elif [ $count == 17 ]
-    then
+        ;;
+    17)
         echo -e "$count\nbad luck from Italy"
-    else
+        ;;
+    *)
         echo "$count"
-    fi
+        ;;
+    esac
     (( count++ ))
 done
