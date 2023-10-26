@@ -8,7 +8,7 @@ if [ -e "school" ]; then
     else
         echo "school file is empty"
     fi
-    if [ -f "School" ]
+    if [ -f "school" ]
     then
         echo "school is a regular file"
     fi
