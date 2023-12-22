@@ -15,3 +15,5 @@
 0x06-regular_expressions
 0x07-networking_basics
 0x08-networking_basics_2
+0x09-web_infrastructure_design
+0x0A. Configuration management
