@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# a Bash script that transfers a file from our client to a server
 
 if [ "$#" -eq 4 ]; then
     PATH_TO_FILE="$1"
