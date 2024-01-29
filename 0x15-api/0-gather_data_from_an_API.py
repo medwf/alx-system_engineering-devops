@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """import module"""
-import requests
 import re
+import requests
 from sys import argv
 
 
