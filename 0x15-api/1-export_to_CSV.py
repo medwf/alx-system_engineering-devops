@@ -11,7 +11,7 @@ def GET(id):
     URL = f'https://jsonplaceholder.typicode.com'
     USERS = requests.get(f"{URL}/users/{id}").json()
     TODOs = requests.get(f"{URL}/todos").json()
-    EMPLOYEE_NAME = USERS.get('name')
+    EMPLOYEE_NAME = USERS.get('username')
     # print(f"{USERS}\n{TODOS}\n{EMPLOYEE_NAME}")
     TODOS = list(filter(
         lambda x: x.get('userId') == id,
