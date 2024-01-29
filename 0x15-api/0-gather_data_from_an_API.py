@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """import module"""
 import requests
-from sys import argv
 import re
+from sys import argv
 
 
 def GET(id):
