@@ -2,12 +2,10 @@
 """import module
 """
 import json
-import re
 import requests
-import sys
 
 
-def GET(id):
+def GET():
     """GET : is function that get requests and print with right format"""
     URL = f'https://jsonplaceholder.typicode.com'
     USERS = requests.get(f"{URL}/users/{id}").json()
@@ -32,6 +30,4 @@ def GET(id):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and re.fullmatch(r'\d+', sys.argv[1]):
-        id = int(sys.argv[1])
-        GET(id)
+        GET()
