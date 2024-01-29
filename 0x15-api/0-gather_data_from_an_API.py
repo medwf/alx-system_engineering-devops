@@ -10,8 +10,6 @@ def GET(id):
     URL = f'https://jsonplaceholder.typicode.com'
     USERS = requests.get(f"{URL}/users/{id}").json()
     TODOS = requests.get(f"{URL}/todos").json()
-    # print(USERS)
-    # print(TODOS)
     EMPLOYEE_NAME = USERS.get('name')
     TOTAL_NUMBER_OF_TASKS = list(filter(
         lambda x: x.get('userId') == id,
@@ -23,9 +21,7 @@ def GET(id):
         EMPLOYEE_NAME, len(NUMBER_OF_DONE_TASKS),
         len(TOTAL_NUMBER_OF_TASKS)))
     for TASK_TITLE in NUMBER_OF_DONE_TASKS:
-        print("\t {}".format(
-            TASK_TITLE.get('title')
-        ))
+        print("\t {}".format(TASK_TITLE.get('title')))
 
 
 if __name__ == "__main__":
