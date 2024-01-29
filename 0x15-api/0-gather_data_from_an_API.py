@@ -26,7 +26,7 @@ def GET(id):
         len(TOTAL_NUMBER_OF_TASKS)
     ))
     for TODO_DONE in NUMBER_OF_DONE_TASKS:
-        print("\t {}".format(
+        print("     {}".format(
             TODO_DONE.get('title')
         ))
 
