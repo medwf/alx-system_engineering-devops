@@ -26,12 +26,12 @@ def GET(id):
         len(TOTAL_NUMBER_OF_TASKS)
     ))
     for TODO_DONE in NUMBER_OF_DONE_TASKS:
-        print("     {}".format(
+        print("\t {}".format(
             TODO_DONE.get('title')
         ))
 
 
 if __name__ == "__main__":
-    """start code"""
     if len(argv) > 1 and re.fullmatch(r'\d+', argv[1]):
-        GET(int(argv[1]))
+        id = int(argv[1])
+        GET(id)
