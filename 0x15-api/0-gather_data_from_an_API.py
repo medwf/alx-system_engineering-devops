@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""import module"""
+"""import module
+"""
 import re
 import requests
-from sys import argv
+import sys
 
 
 def GET(id):
@@ -25,6 +26,6 @@ def GET(id):
 
 
 if __name__ == "__main__":
-    if len(argv) > 1 and re.fullmatch(r'\d+', argv[1]):
-        id = int(argv[1])
+    if len(sys.argv) > 1 and re.fullmatch(r'\d+', sys.argv[1]):
+        id = int(sys.argv[1])
         GET(id)
