@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""import module
+"""module
 """
 import json
 import requests
@@ -29,4 +29,4 @@ def GET():
 
 
 if __name__ == "__main__":
-        GET()
+    GET()
