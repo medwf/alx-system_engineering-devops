@@ -8,9 +8,8 @@ import requests
 def GET():
     """GET : is function that get requests and print with right format"""
     URL = f'https://jsonplaceholder.typicode.com'
-    USERS = requests.get(f"{URL}/users/{id}").json()
+    USERS = requests.get(f"{URL}/users").json()
     TODOS = requests.get(f"{URL}/todos").json()
-    EMPLOYEE_NAME = USERS.get('username')
     users_data = {}
     for user in USERS:
         id = user.get('id')
@@ -24,7 +23,7 @@ def GET():
             },
             todos
         ))
-        users_data['{}'.format(id)] = user_data
+        users_data[f'{id}'] = user_data
     with open('todo_all_employees.json', 'w') as file:
         json.dump(users_data, file)
 
