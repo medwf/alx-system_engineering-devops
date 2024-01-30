@@ -12,22 +12,21 @@ def GET(id):
     URL = f'https://jsonplaceholder.typicode.com'
     USERS = requests.get(f"{URL}/users/{id}").json()
     TODOS = requests.get(f"{URL}/todos").json()
-    users_data = {}
-    for user in USERS:
-        id = user.get('id')
-        user_name = user.get('username')
-        todos = list(filter(lambda x: x.get('userId') == id, TODOS))
-        user_data = list(map(
-            lambda x: {
-                'username': user_name,
-                'task': x.get('title'),
-                'completed': x.get('completed')
-            },
-            todos
-        ))
-        users_data['{}'.format(id)] = user_data
-    with open('todo_all_employees.json', 'w') as file:
-        json.dump(users_data, file)
+    data = {}
+
+    user_name = USERS.get('username')
+    todos = list(filter(lambda x: x.get('userId') == id, TODOS))
+    user_data = list(map(
+        lambda x: {
+            'task': x.get('title'),
+            'completed': x.get('completed'),
+            'username': user_name
+        },
+        todos
+    ))
+    data['{}'.format(id)] = user_data
+    with open(f'{id}.json', 'w') as file:
+        json.dump(data, file)
 
 
 if __name__ == "__main__":
