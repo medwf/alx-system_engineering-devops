@@ -1,15 +1,11 @@
 #!/usr/bin/python3
-"""module:
-    number_of_subscribers:
-        is a function that queries the Reddit API and returns
-            the number of subscribers
-    """
+"""number_of_subscribers"""
 import requests
 
 
 def number_of_subscribers(subreddit):
     """return the number of subscribers"""
-    headers = {'User-Agent': 'MyCoolRedditApp/1.0'}
+    headers = {'User-Agent': 'Chrome'}
     URL = f"https://www.reddit.com/r/{subreddit}/about.json"
     data = requests.get(URL, allow_redirects=False, headers=headers)
     if data.status_code == 200:
