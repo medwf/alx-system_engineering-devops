@@ -54,3 +54,57 @@ To resolve the issue, the connection pooling settings were adjusted to impose li
 5. Document the incident details and lessons learned for future reference and training purposes.
 
 By implementing these measures and addressing the identified tasks, we aim to enhance the stability and reliability of our authentication service, minimizing the risk of similar outages in the future.
+
+# advanced:
+**Issue Summary:**
+
+- **Duration:** 
+  - Start Time: February 13, 2024, 10:00 PM (UTC)
+  - End Time: February 14, 2024, 2:00 AM (UTC)
+- **Impact:** 
+  - The authentication service took an unexpected coffee break, leaving 80% of users locked out and scratching their heads.
+
+**Root Cause:**
+The culprit behind the chaos was a rebellious surge in database connections, throwing a party and inviting everyone, leading to a database overload due to misconfigured connection pooling settings.
+
+**Timeline:**
+
+- **10:00 PM (UTC):** 
+  - Like a sudden gust of wind, automated monitoring alerts blew in, signaling a spike in error rates for authentication requests.
+- **10:05 PM (UTC):** 
+  - Our intrepid engineering team sprang into action, ready to tackle the mystery.
+- **10:15 PM (UTC):** 
+  - Initial assumption: The database was throwing a tantrum due to increased load.
+- **10:30 PM (UTC):** 
+  - Armed with data, we delved into database performance metrics, only to find a dead end.
+- **11:00 PM (UTC):** 
+  - Misleading investigation: We took a detour down the rabbit hole of network connectivity issues, but the Cheshire Cat was nowhere to be found.
+- **11:30 PM (UTC):** 
+  - Desperate times call for desperate measures, so we called in the database administrators and networking team for backup.
+- **12:00 AM (UTC):** 
+  - Eureka! We uncovered the misconfigured connection pooling settings, the sneaky culprit behind the chaos.
+- **1:00 AM (UTC):** 
+  - Armed with our newfound knowledge, we heroically adjusted the connection pooling settings, putting an end to the database's shenanigans.
+- **2:00 AM (UTC):** 
+  - With a triumphant flourish, service was restored, and users could once again log in without fear of rejection.
+
+**Root Cause and Resolution:**
+
+The misconfigured connection pooling settings were like leaving the cookie jar wide open, allowing an excessive number of concurrent connections to overwhelm the database. By adjusting these settings to impose limits on connection numbers, we restored order to the chaos and brought peace to our authentication service.
+
+**Corrective and Preventative Measures:**
+
+1. **Configuration Cleanup:** We'll tidy up our configuration settings like Marie Kondo, ensuring everything has its proper place and purpose.
+2. **Monitoring Marvels:** Enhance our monitoring systems to be as vigilant as a hawk, spotting abnormal database behavior before it spirals out of control.
+3. **Load Testing Shenanigans:** Conduct regular load testing to put our systems through their paces and ensure they can handle the heat without breaking a sweat.
+4. **Documentation Delight:** Document the incident with flair, incorporating lessons learned and best practices to share with future generations of troubleshooters.
+
+**Tasks:**
+
+1. Tighten up those connection pooling settings to keep our database in line.
+2. Give the database resources a little TLC to prevent future meltdowns.
+3. Add extra layers of monitoring like a delicious parfait to catch any misbehaving connections.
+4. Schedule regular load testing sessions, because practice makes perfect.
+5. Craft a post-mortem worthy of Shakespeare, complete with drama, humor, and a valuable lesson or two.
+
+With these measures in place, we're confident that we'll keep our authentication service running smoother than a well-oiled machine, and our users happier than a kid in a candy store.
