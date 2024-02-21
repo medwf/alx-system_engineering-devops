@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 # Get the process ID (PID) of the Gunicorn master
 GUNICORN_PID="$(pgrep gunicorn)"
-
-# Send the HUP signal to the master process
 kill -HUP "$GUNICORN_PID"
-
-echo "Gunicorn reloaded gracefully."
