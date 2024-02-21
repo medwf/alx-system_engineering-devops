@@ -1,4 +1,16 @@
-#!/usr/bin/env bash
-# No service interruption
+#!/bin/bash
 
-pgrep gunicorn | xargs -I {} kill -HUP {}
+# Set the number of workers to gracefully restart
+NUM_WORKERS=3
+
+# Send signal to gracefully reload Gunicorn workers
+kill -s HUP $(cat /path/to/gunicorn.pid)
+
+sleep 5
+
+OLD_WORKERS=$(ps aux | grep '[g]unicorn' | wc -l)
+if [ "$OLD_WORKERS" -gt "$NUM_WORKERS" ]; then
+    sleep 5
+fi
+pkill -9 -f gunicorn
+
